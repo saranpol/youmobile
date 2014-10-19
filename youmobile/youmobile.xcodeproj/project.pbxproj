@@ -427,6 +427,7 @@
 				4378ED0919F2F1F800575AB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4378ED0A19F2F1F800575AB9 /* Build configuration list for PBXNativeTarget "youmobileTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +436,7 @@
 				4378ED0C19F2F1F800575AB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

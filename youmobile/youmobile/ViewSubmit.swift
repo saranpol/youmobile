@@ -110,9 +110,14 @@ class ViewSubmit: UIViewController {
     @IBAction func clickSubmit() {
         dismissKeyboard()
         
-        if(mTextFieldName.text == "" || mTextFieldEmail.text == "" || mTextFieldPhone.text == ""){
+        if(mTextFieldName.text == ""){
             return
         }
+        
+        if(mTextFieldEmail.text == "" && mTextFieldPhone.text == ""){
+            return
+        }
+        
         let key = "SaveData"
         
         let u = NSUserDefaults.standardUserDefaults()
