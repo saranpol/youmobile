@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="3W3-Wu-jNM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="3W3-Wu-jNM">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--View Data-->
@@ -71,7 +71,7 @@
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZN-0z-LJC">
                                 <rect key="frame" x="524" y="743" width="193" height="189"/>
-                                <state key="normal" image="open-btn-register">
+                                <state key="normal" image="open-btn-guest">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -87,12 +87,22 @@
                                     <segue destination="IZ3-gm-rRN" kind="modal" identifier="GotoViewSubmit" animates="NO" id="RxM-6w-Idf"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAa-Dm-cAQ">
+                                <rect key="frame" x="220" y="743" width="193" height="189"/>
+                                <state key="normal" image="open-btn-press">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickRegisterPress" destination="BYZ-38-t0r" eventType="touchUpInside" id="y44-xf-afm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Jcp-OB-LRU"/>
                     <connections>
                         <outlet property="mButtonRegister" destination="mZN-0z-LJC" id="kox-pM-10L"/>
+                        <outlet property="mButtonRegisterPress" destination="wAa-Dm-cAQ" id="nzy-ca-LQ6"/>
                         <outlet property="mImageYou" destination="13n-4C-wRI" id="1Hk-8M-eXz"/>
                     </connections>
                 </viewController>
@@ -113,7 +123,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="form-background" translatesAutoresizingMaskIntoConstraints="NO" id="Ksc-Fx-dnv">
-                                <rect key="frame" x="16" y="333" width="768" height="544"/>
+                                <rect key="frame" x="16" y="394" width="768" height="544"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="open-visual" translatesAutoresizingMaskIntoConstraints="NO" id="foc-Oo-d9k">
                                 <rect key="frame" x="-15" y="-8" width="576" height="509"/>
@@ -134,7 +144,7 @@
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q2W-GI-NE4">
-                                <rect key="frame" x="199" y="509" width="371" height="56"/>
+                                <rect key="frame" x="199" y="563" width="371" height="56"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="NAME" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="OEL-2g-KN4">
                                         <rect key="frame" x="10" y="0.0" width="361" height="56"/>
@@ -147,7 +157,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MIv-MD-TjR">
-                                <rect key="frame" x="199" y="577" width="371" height="56"/>
+                                <rect key="frame" x="199" y="624" width="371" height="56"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="EMAIL" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="h0D-eq-l14">
                                         <rect key="frame" x="10" y="0.0" width="361" height="56"/>
@@ -160,7 +170,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ceI-K1-lGj">
-                                <rect key="frame" x="199" y="645" width="371" height="56"/>
+                                <rect key="frame" x="199" y="685" width="371" height="56"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PHONE NUMBER" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="ymn-Xe-kHr">
                                         <rect key="frame" x="10" y="0.0" width="361" height="56"/>
@@ -173,24 +183,56 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NbG-fF-ela">
-                                <rect key="frame" x="524" y="732" width="193" height="189"/>
+                                <rect key="frame" x="520" y="801" width="193" height="189"/>
                                 <state key="normal" image="form-btn-submit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="clickSubmit" destination="IZ3-gm-rRN" eventType="touchUpInside" id="STG-D7-JPH"/>
+                                    <action selector="clickSubmit" destination="IZ3-gm-rRN" eventType="touchUpInside" id="QQi-tB-5f8"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNp-ea-O3w">
+                                <rect key="frame" x="27" y="794" width="97" height="95"/>
+                                <state key="normal" backgroundImage="thx-btn-back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickBack" destination="IZ3-gm-rRN" eventType="touchUpInside" id="0Ch-Jv-eIE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GUEST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHe-Sm-jvA">
+                                <rect key="frame" x="279" y="500" width="210" height="57"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b3Q-E1-bfe">
+                                <rect key="frame" x="199" y="746" width="371" height="56"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="COMPANY" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="F6T-M6-kTi">
+                                        <rect key="frame" x="10" y="0.0" width="361" height="56"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="0.37517458100000001" green="0.37517458100000001" blue="0.37517458100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="LY5-DK-aZa"/>
                     <connections>
+                        <outlet property="mButtonBack" destination="RNp-ea-O3w" id="Gpk-We-GMP"/>
                         <outlet property="mButtonSubmit" destination="NbG-fF-ela" id="eiT-Dy-Eki"/>
                         <outlet property="mImageBG" destination="Ksc-Fx-dnv" id="s5L-jZ-lOX"/>
+                        <outlet property="mLabelType" destination="IHe-Sm-jvA" id="jXh-n7-UFI"/>
+                        <outlet property="mTextFieldCompany" destination="F6T-M6-kTi" id="pBn-e6-Hv1"/>
                         <outlet property="mTextFieldEmail" destination="h0D-eq-l14" id="bSO-Ya-OmN"/>
                         <outlet property="mTextFieldName" destination="OEL-2g-KN4" id="zwY-lJ-slq"/>
                         <outlet property="mTextFieldPhone" destination="ymn-Xe-kHr" id="ac5-JR-koO"/>
+                        <outlet property="mViewCompany" destination="b3Q-E1-bfe" id="eMS-AT-yoH"/>
                         <outlet property="mViewEmail" destination="MIv-MD-TjR" id="IVr-rb-52z"/>
                         <outlet property="mViewName" destination="Q2W-GI-NE4" id="Js6-n6-VJH"/>
                         <outlet property="mViewPhone" destination="ceI-K1-lGj" id="9bl-Fv-svV"/>
@@ -198,7 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2W7-9N-flR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3018" y="1061"/>
+            <point key="canvasLocation" x="3041" y="1052"/>
         </scene>
         <!--View Done-->
         <scene sceneID="HsL-wD-5qC">
@@ -231,7 +273,6 @@
                                 </state>
                                 <connections>
                                     <action selector="clickBack" destination="O0C-p7-kws" eventType="touchUpInside" id="X1A-Ze-i0U"/>
-                                    <action selector="clickSubmit" destination="IZ3-gm-rRN" eventType="touchUpInside" id="IjS-fE-HKf"/>
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="thx-txt-thankyou" translatesAutoresizingMaskIntoConstraints="NO" id="fSC-5K-Qtg">
@@ -277,7 +318,8 @@
         <image name="form-background" width="768" height="544"/>
         <image name="form-btn-submit" width="193" height="189"/>
         <image name="logo-ais" width="119" height="43"/>
-        <image name="open-btn-register" width="193" height="189"/>
+        <image name="open-btn-guest" width="193" height="188"/>
+        <image name="open-btn-press" width="193" height="188"/>
         <image name="open-visual" width="698" height="597"/>
         <image name="thx-btn-back" width="193" height="189"/>
         <image name="thx-txt-thankyou" width="366" height="47"/>

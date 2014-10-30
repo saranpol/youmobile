@@ -86,7 +86,7 @@ class ViewDone: UIViewController {
             
             UIView.animateWithDuration(0.8, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 3.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: ({
                 self.mImageYou.alpha = 0
-                self.mImageYou.layer.transform = CATransform3DMakeScale(0, 0, 1.0)
+                self.mImageYou.layer.transform = CATransform3DMakeScale(0.00001, 0.00001, 1.0)
                 
             }), completion: {(value: Bool) in
                 self.mImageYou.hidden = true

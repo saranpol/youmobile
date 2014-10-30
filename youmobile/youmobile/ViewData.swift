@@ -33,6 +33,8 @@ class ViewData: UIViewController {
         html += "<td>NAME</td>"
         html += "<td>EMAIL</td>"
         html += "<td>PHONE NUMBER</td>"
+        html += "<td>TYPE</td>"
+        html += "<td>COMPANY</td>"
         html += "</tr>"
         
         for p in data {
@@ -40,6 +42,8 @@ class ViewData: UIViewController {
             html += "<td>" + (p["name"] as String) + "</td>"
             html += "<td>" + (p["email"] as String) + "</td>"
             html += "<td>" + (p["phone"] as String) + "</td>"
+            html += "<td>" + (p["type"] as String) + "</td>"
+            html += "<td>" + (p["company"] as String) + "</td>"
             html += "</tr>"
         }
         
